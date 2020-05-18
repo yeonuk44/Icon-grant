@@ -21,3 +21,6 @@ Icon Grant Project ( Public )
 Now check your project screen in localhost
 
 ### localhost url : http://localhost:8080
+
+But if already installed "Vue cli",  
+just Command : vue create Project_name
