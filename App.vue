@@ -3,23 +3,24 @@
 
     <v-content>
       <AppBar/>
-      <HelloWorld/>
+      <!-- <HelloWorld/> -->
       <MainPage/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+// import HelloWorld from './components/HelloWorld';
 import AppBar from './components/AppBar';
-import MainPage
+import MainPage from './components/MainPage';
+
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    // HelloWorld,
     AppBar,
-
+    MainPage,
   },
 
   data: () => ({

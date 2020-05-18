@@ -25,7 +25,7 @@
     >
       
       <v-app-bar-nav-icon
-      width="46 em">
+      width="45.5em">
           <v-icon >
           </v-icon>
       </v-app-bar-nav-icon>
