@@ -34,7 +34,7 @@
             </v-row>
             <v-col>
             <v-icon x-large></v-icon>
-            <p class="headline ">or</p>
+            <p class="text headline">or</p>
             </v-col>
             <v-row justify="center">
                 <v-col justify="center">
@@ -58,3 +58,10 @@
     </v-row>
   </v-container>
 </template>
+
+
+<style scoped>
+.text{
+    padding-top: 50%;
+}
+</style>
