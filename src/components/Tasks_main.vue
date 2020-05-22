@@ -7,15 +7,18 @@
               <!-- <v-row class="text-center"> -->
               <v-row>
 
-                <v-col cols="12">
+                <v-col>
                   <h2 class="mb-4">Select a customizable template to start a new project</h2>
                   <div>
-                    <v-simple-table
+                    <v-data-table
                     :dense="dense"
                     :fixed-header="fixedHeader"
                     :height="height"
+                    :headers="headers"
+                    :items="kind"
+                    class="table"
                     >
-                    <template v-slot:default>
+                    <!-- <template v-slot:default>
                     <thead>
                       <tr>
                         <th class="text-left">Survey</th>
@@ -63,12 +66,11 @@
                     </tbody>
 
 
-                    </template>
-                    </v-simple-table>
+                    </template> -->
+                    </v-data-table>
                   </div>
-
-
                 </v-col>
+                  
               </v-row>
       </v-container>
 
@@ -87,104 +89,88 @@ export default {
   },
 
   data: () => ({
-    dense:false,
+    dense:false , //줄간격 만들기
     fixedHeader:false,
-    heght:300,
-    Survey_option: [
+    heght:100,
+    headers: [
       {
-        kind:'Survey link'
+        align:'start',
+        sortable:false,
+        value:'name',
+      },
+      {text:'Index', value:'index'},
+      {href:'Survey', value :'survey'},
+      {text:'Vision', value:'vision'},
+      {text:'Language', value:'language'},
+      {text:'Other', value:'other'},
+    ],
+
+    kind: [
+      {
+        index:0,
+        survey:'Survey link',
+        vision:'Image Classification',
+        language:'Sentiment Analysis',
+        other:'Data Collection',
       },
       {
-        kind:'Survey'
+        index:1,
+        survey:'Survey',
+        vision:'Bounding Box',
+        language:'Intent Detection',
+        other:'Website Collection',
+      },
+      {
+        index:2,
+        vision:'Semantic Segmentation',
+        language:'Collect Utterance',
+        other:'Website Classification',
+      },
+      {
+        index:3,
+        vision:'Instance Segmentation',
+        language:'Emotion Detection',
+        other:'Item Equality',
+      },
+      {
+        index:4,
+        vision:'Polygon',
+        language:'Semantic Similarity',
+        other:'Search Relevance',
+      },
+      {
+        index:5,
+        vision:'Keypoint',
+        language:'Audio Transcription',
+        other:'Other',
+      },
+      {
+        index:6,
+        vision:'Image Contains',
+        language:'Conversation Relevance',
+      },
+      {
+        index:7,
+        vision:'Video Classification',
+        language:'Document Classification',
+      },
+      {
+        index:8,
+        vision:'Moderation of an Image',
+        language:'Translation Quality',
+      },
+      {
+        index:9,
+        vision:'Image Tagging',
+        language:'Audio Naturalness',
+      },
+      {
+        index:10,
+        vision:'Image Summatiazation',
       },
     ],
-    Vision_option: [
-      {
-        kind:'Image Classification'
-      },
-      {
-        kind:'Bounding Box'
-      },
-      {
-        kind:'Semantic Segmentation'
-      },
-      {
-        kind:'Instance Segmentation'
-      },
-      {
-        kind:'Polygon'
-      },
-      {
-        kind:'Keypoint'
-      },
-      {
-        kind:'Image Contains'
-      },
-      {
-        kind:'Video Classification'
-      },
-      {
-        kind:'Moderation of an Image'
-      },
-      {
-        kind:'Image Tagging'
-      },
-      {
-        kind:'Image Summatiazation'
-      },
-    ],
-    Language_option: [
-      {
-        kind:'Sentiment Analysis'
-      },
-      {
-        kind:'Intent Detection'
-      },
-      {
-        kind:'Collect Utterance'
-      },
-      {
-        kind:'Emotion Detection'
-      },
-      {
-        kind:'Semantic Similarity'
-      },
-      {
-        kind:'Audio Transcription'
-      },
-      {
-        kind:'Conversation Relevance'
-      },
-      {
-        kind:'Document Classification'
-      },
-      {
-        kind:'Translation Quality'
-      },
-      {
-        kind:'Audio Naturalness'
-      },
-    ],
-    Other_option: [
-      {
-        kind:'Data Collection'
-      },
-      {
-        kind:'Website Collection'
-      },
-      {
-        kind:'Website Classification'
-      },
-      {
-        kind:'Item Equality'
-      },
-      {
-        kind:'Search Relevance'
-      },
-      {
-        kind:'Other'
-      },
-    ]
+   
+    
   }),
 };
 </script>
