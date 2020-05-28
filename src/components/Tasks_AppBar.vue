@@ -48,7 +48,7 @@ export default {
       </v-menu> -->
     </v-app-bar>
 
-  <p class="appBar" >New Project </p>
+  <h4 class="appBar" >New Project </h4>
   </div>
 </template>
 

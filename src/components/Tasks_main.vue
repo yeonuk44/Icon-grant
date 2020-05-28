@@ -2,7 +2,7 @@
   <v-app>
 
     <v-content>
-      <HelloWorld/>
+      <!-- <HelloWorld/> -->
       <v-container>
               <!-- <v-row class="text-center"> -->
               <v-row>
@@ -79,13 +79,13 @@
 </template>
 
 <script>
-import HelloWorld from './HelloWorld';
+// import HelloWorld from './HelloWorld';
 
 export default {
-  name: 'App',
+  name: 'Tasks_main',
 
   components: {
-    HelloWorld,
+    // HelloWorld,
   },
 
   data: () => ({
@@ -99,7 +99,7 @@ export default {
         value:'name',
       },
       {text:'Index', value:'index'},
-      {href:'Survey', value :'survey'},
+      {text:'Survey', value :'survey'},
       {text:'Vision', value:'vision'},
       {text:'Language', value:'language'},
       {text:'Other', value:'other'},
